@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Nist_index</title>
+    </head>
+    <body>
+        <form name="Form_test" method=post>
+            <div>
+                Gmail Validation : <input type="text" name="myText" id="gmail">
+            </div>
+            <br>
+            <input type="button" value="submit" onclick="fun4()">
+        </form>
+        <form name="Form_test" method=post>
+            <div>
+                Nist Validation : <input type="text" name="myText" id="nist">
+            </div>
+            <br>
+            <input type="button" value="submit" onclick="fun1()">
+        </form>
+        <form name="Form_test" method=post>
+            <div>
+                Uppercase Validation : <input type="text" name="myText" id="upper">
+            </div>
+            <br>
+            <input type="button" value="submit" onclick="fun2()">
+        </form>
+        <form name="Form_test" method=post>
+            <div>
+                Lowercase Validation : <input type="text" name="myText" id="lower">
+            </div>
+            <br>
+            <input type="button" value="submit" onclick="fun3()">
+        </form>
+    </body>
+    <script>
+        function fun4()
+        {
+            var str=document.getElementById("gmail").value;
+            var x=str.indexOf('@');
+            var y=str.indexOf('.');
+            var z=y-x;
+            if(z==6)
+            {
+                alert("Vaild Gmail");
+            }
+            else{
+                alert("Not Vaild Gmail");
+            }
+        }
+        function fun1()
+        {
+            var str=document.getElementById("nist").value;
+            var ch=str.charAt(3);
+            if(ch=='t' || ch=='T')
+            {
+                alert("This Valid Website");
+            }
+            else
+            {
+                alert("This Not Valid Website");
+            }
+        }
+        function fun2()
+        {
+            var str=document.getElementById("upper").value;
+            var ch=str.charAt(0);
+            var c=ch.toUpperCase();
+            if(c==ch)
+            {
+                alert("Vaild");
+            }
+            else
+            {
+                alert("Not Valid");
+            }
+        }
+        function fun3()
+        {
+            var str=document.getElementById("lower").value;
+            var ch=str.charAt(0);
+            var c=ch.toLowerCase();
+            if(c==ch)
+            {
+                alert("Vaild");
+            }
+            else
+            {
+                alert("Not Valid");
+            }
+        }
+    </script>
+</html>
